@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structural Monitoring System</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <header class="app-header">
+        <div class="header-content">
+            <h1>Structural Monitoring System</h1>
+            <p class="subtitle">
+                Real-time reinforced concrete inspection and structural risk classification dashboard
+            </p>
+        </div>
+    </header>
+
+    <main class="dashboard">
+
+        <section class="stats-grid">
+
+            <div class="stat-card total-card">
+                <p>Total Elements</p>
+                <h2 id="total-count">0</h2>
+            </div>
+
+            <div class="stat-card safe-card">
+                <p>Safe Elements</p>
+                <h2 id="safe-count">0</h2>
+            </div>
+
+            <div class="stat-card warning-card">
+                <p>Warning Status</p>
+                <h2 id="warning-count">0</h2>
+            </div>
+
+            <div class="stat-card critical-card">
+                <p>Critical Risk</p>
+                <h2 id="critical-count">0</h2>
+            </div>
+
+        </section>
+
+        <section class="toolbar">
+
+            <div class="filter-group">
+                <button id="btnAll" class="active">All Elements</button>
+                <button id="btnSafe">Safe</button>
+                <button id="btnWarning">Warning</button>
+                <button id="btnCritical">Critical</button>
+                <button id="btnAnomaly">Sensor Anomalies</button>
+            </div>
+
+            <div class="search-group">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Search element ID (e.g. C-25)"
+                    autocomplete="off"
+                >
+            </div>
+
+            <button id="exportBtn" class="export-btn">
+                Export CSV Report
+            </button>
+
+        </section>
+
+        <section class="report-section">
+            
+            <div style="display: grid; grid-template-columns: 100px 120px 120px 1fr 100px; gap: 15px; padding: 12px 20px; background: #f8fafc; border-bottom: 2px solid #e2e8f0; font-size: 12px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; border-radius: 12px 12px 0 0;">
+                <span>Element ID</span>
+                <span>Strength</span>
+                <span>Status</span>
+                <span>Component Type</span>
+                <span style="text-align: right;">Timestamp</span>
+            </div>
+
+            <ul id="report-list" class="report-list"></ul>
+
+            <div class="pagination">
+                <button id="prevBtn" disabled>Previous</button>
+                <span id="pageInfo">Page 1 of 1</span>
+                <button id="nextBtn">Next</button>
+            </div>
+
+        </section>
+
+        <section class="analytics">
+            <h2>Structural Health Distribution Breakdown</h2>
+            <div class="chart-container">
+                <canvas id="healthChart"></canvas>
+            </div>
+        </section>
+
+    </main>
+
+    <aside id="detailPanel" class="detail-panel">
+
+        <div class="detail-header">
+            <h3>Structural Diagnostics</h3>
+            <button id="closePanel">Close ✕</button>
+        </div>
+
+        <div id="detailContent">
+            <p style="color: #94a3b8; text-align: center; margin-top: 40px;">
+                Select any component structural row from the checklist to generate deep telemetry metrics.
+            </p>
+        </div>
+
+    </aside>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
