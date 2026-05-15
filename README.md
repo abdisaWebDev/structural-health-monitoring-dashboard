@@ -1,2 +1,17 @@
-# structural-health-monitoring-dashboard
-Web dashboard for checking building safety. Automatically scans 500 concrete columns and labels them Safe, Warning, or Critical using colors. Features fast search, a sliding panel for engineer notes, a visual health chart, and an Excel export button. Replaces slow paperwork with simple, paperless data.
+# 🏗️ Structural Health Monitoring Dashboard
+
+This is a web dashboard built to check building safety in real time. It helps structural engineers monitor concrete columns easily without slow paperwork.
+
+## 🚀 Key Features
+- **Smart Data Simulation:** Tracks 500 concrete columns across 10 floors. Columns on lower floors show a higher risk of stress and warnings, just like a real building.
+- **Live Safety Calculations:** Automatically calculates the maximum load capacity ($P_n$) for each column using real engineering formulas.
+- **Sensor Error Detection:** Automatically catches hardware mistakes (like negative numbers) and labels them as "Sensor Anomalies" so engineers know when a machine needs fixing.
+- **Easy Interface:** Includes a colorful doughnut chart, a fast search bar, a sliding panel for detailed logs, and an Excel/CSV export button for field reports.
+
+## 🛠️ Built With
+- **HTML5 & CSS3:** For a clean, responsive layout and colors.
+- **JavaScript (ES6):** For sorting, filtering, data calculations, and state management.
+- **Chart.js:** For the visual analytics chart.
+
+## 📄 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
