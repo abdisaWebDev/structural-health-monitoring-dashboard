@@ -1,5 +1,16 @@
 # 🏗️ Structural Health Monitoring Dashboard
 
+## 🔍 At A Glance: Problem vs. Solution
+
+| ❌ The Old Problem |  The New Solution |
+| :--- | :--- |
+| **Slow Paperwork:** Building inspectors use clipboards and paper sheets to check concrete columns. It takes days to find mistakes, and reports get lost easily. | **Instant Safety Tracking:** This digital dashboard reads 500 columns in seconds, auto-calculates load limits, and highlights critical risks instantly using clear colors. |
+
+### 📱 Live User Interface
+![Dashboard UI Screenshot](dashboard-ui.png)
+
+---
+
 This is a web dashboard built to check building safety in real time. It helps structural engineers monitor concrete columns easily without slow paperwork.
 
 ## 🚀 Key Features
